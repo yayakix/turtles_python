@@ -17,6 +17,8 @@ def left():
     bob.left(45)
 def right():
     bob.right(45)
+def reset():
+    screen.resetscreen()
 
 screen = t.Screen()
 screen.listen()
@@ -24,4 +26,5 @@ screen.onkey(key="w", fun=forward)
 screen.onkey(key="s", fun=backward)
 screen.onkey(key="a", fun=left)
 screen.onkey(key="d", fun=right)
+screen.onkey(key="c", fun=reset)
 screen.exitonclick()
